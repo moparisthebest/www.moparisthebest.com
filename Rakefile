@@ -4,10 +4,10 @@ require "stringex"
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
-ssh_user       = "user@domain.com"
-ssh_port       = "22"
-document_root  = "~/website.com/"
-rsync_delete   = false
+ssh_user       = "mopar@dedi.moparisthebest.com"
+ssh_port       = "443"
+document_root  = "/home/mopar/htdocs/android.moparisthebest.org/"
+rsync_delete   = true
 rsync_args     = ""  # Any extra arguments to pass to rsync
 deploy_default = "rsync"
 
