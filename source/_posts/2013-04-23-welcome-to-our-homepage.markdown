@@ -16,6 +16,6 @@ We also need some help from you guys, what do you think we should feature on the
 [2]: http://octopress.org
 [3]: https://github.com/mojombo/jekyll
 [4]: https://github.com/moparisthebest/www.moparscape.org
-[5]: https://github.com/moparisthebest/www.moparscape.org/master/source/_posts/2013-04-23-welcome-to-our-homepage.markdown
+[5]: https://raw.github.com/moparisthebest/www.moparscape.org/master/source/_posts/2013-04-23-welcome-to-our-homepage.markdown
 [6]: mailto:admin@moparscape.org
 [7]: http://octopress.org/docs/blogging/
