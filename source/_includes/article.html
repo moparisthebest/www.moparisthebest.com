@@ -16,17 +16,18 @@
   </header>
 {% endunless %}
 
-<script type="text/javascript"><!--
-google_ad_client = "ca-pub-3055920918910714";
-/* moparscape.org_banner */
-google_ad_slot = "4021158971";
-google_ad_width = 468;
-google_ad_height = 60;
-//-->
-</script>
-<script type="text/javascript"
-src="//pagead2.googlesyndication.com/pagead/show_ads.js">
-</script>
+{% if site.google_bannerad_slot %}
+  <script type="text/javascript"><!--
+  google_ad_client = "{{site.google_ad_client}}";
+  google_ad_slot = "{{site.google_bannerad_slot}}";
+  google_ad_width = {{site.google_bannerad_width}};
+  google_ad_height = {{site.google_bannerad_height}};
+  //-->
+  </script>
+  <script type="text/javascript"
+  src="//pagead2.googlesyndication.com/pagead/show_ads.js">
+  </script>
+{% endif %}
 
 {% if index %}
   <div class="entry-content">{{ content | excerpt }}</div>

@@ -91,5 +91,16 @@ disqus_show_comment_count: true
 # Google Analytics
 google_analytics_tracking_id: UA-6877554-1
 
+# Google Adsense
+google_ad_client: ca-pub-3055920918910714
+
+google_sidead_slot: 8451358572
+google_sidead_width: 160
+google_sidead_height: 600
+
+google_bannerad_slot: 4021158971
+google_bannerad_width: 468
+google_bannerad_height: 60
+
 # Facebook Like
 facebook_like: true
