@@ -1,29 +1,14 @@
 ---
 layout: page
-title: "About MoparScape"
-date: 2013-04-23 15:23
+title: "About Me"
+date: 2009-12-02 15:23
 comments: true
 sharing: true
 footer: true
-author: Ruby
+author: Moparisthebest
 ---
-MoparScape is a site primarily revolving around [RuneScape][1] private servers. We have been around since roughly 2006 starting off as a few boards on our mother site [Moparisthebest.com][2] and eventually growing into our own site with a wide array of forums boards ranging from graphics to general programming and we're still growing yet with over half a million registered users. MoparScape is a great resource if you need to get started and make your way through RSPS. If you already have a server and are looking for players, take a look at our [Server Status Page][6] and [Server Advertisements][7] board.
+I started playing Runescape in December of 2004, I started cheating on Runescape around January of 05 when i found a site with SCAR scripts on it from google, www.rstools.prv.pl, I downloaded chrizs ironminerbanker from there and I was off cheating. Reading that script is how I learned to write scripts. Then in April my mostly legit main got banned because I messed up one line on my second script ever, an autofletcher. I then took a break from runescape, only to come back a few months later in July to find my first cheating community, sythe.org, after posting there a while, I came across a link to kaitnieks.com. I knew the name kaitnieks as the creator of SCAR, so I figured I would check it out, all of the people there including kaitnieks himself were so nice and friendly I just stayed. Since then I have learned many many things, posted a few SCAR scripts people still use and spammed the forums quite well. When winterlove released his private server publicly I wrote a client for it as basically my first attempt at client modifing, well it stuck and everyone started using it. After that I worked on another project, MoparScape Revolution, a pking/SCARable client that was autoupdating and incorporated all of the features I liked to give us cheaters an unfair advantage against legit players in the game. Over the years I have written various small tools, games, and frameworks. One of the ones that I like the best, is a project called Cherokee, which can be found with the full source on sourceforge.net by checking it out with SVN. Though it is not a full fledged bot, it does not lack much from being one, and can be a valuable learning resource for anyone interested in runescape cheating. Since then most of my time has been taken up with college, and courting Ashton up to our recent marriage. I have had time to release a few more private server versions of MoparScape, and soon another will be forthcoming.
 
-Here at MoparScape we have several aids to assist you in creating your own RuneScape private server, first and foremost you can download all the files you will need from [Server Downloads][3], you can then read over some tutorials in the [Server Tutorials][4] board and finally, if you need some help you can check out the [Server Help][5] board. If you aren't interested in RSPS feel free to contribute where you feel you can, website development, graphics, or whatever it may be. Be sure to read the [Global Rules][8] before posting though. We also have an IRC network, if that tickles your fancy. You can find us at irc.moparscape.org on port 6667 in the #moparscape channel, or use our [Web IRC][9]. Alongside all of this we also have the [MoparScape Client][11] which is a great resource for anyone wishing to start up their own server or just fool around locally; a must read for anyone with an interest in RSPS. You can also access the MoparScape webclient [here][12].
+Unbeknownst to most of the cheaters, I also have a real life (who would have guessed?) So Ill tell you a little about that too, I live in the state of Ohio, in the USA. I recently graduated college with a Bachelor’s degree in Computer Science. I also just got married to the love of my life, Ashton, on August 8th, 2009. I like hunting, computers, and mostly cars. (cant you tell from my name?) I own a 1989 Chevy S10 Baja, which is my baby and my daily driver. The original 4.3L V6 finally blew at about 312,000 miles, so I replaced it with a new 5.7L 350ci V8, which was no small job at all, but now it is more awesome than ever. My show truck is a 1990 Chevy 454SS, and its 7.4L motor is just as strong as ever, always trying to roast whatever tires I put on the back of it. I also own a 1973 Plymouth Satellite Sebring, with the rare engine that came in it, the 400ci big block. It needs minor restoration but is in runnable condition and looks great. One day I may get around to posting pictures of my vehicles, but don’t expect it any time soon.
 
-If you have any further questions on MoparScape or its ideals and you can't find them on the forums, don't hesitate to contact a [Staff Member][10] and they will answer your question to the best of their ability.
-
-Happy posting!
-
-[1]: //www.runescape.com
-[2]: //www.moparisthebest.com/smf/index.php
-[3]: //www.moparscape.org/smf/index.php/board,49.0.html
-[4]: //www.moparscape.org/smf/index.php/board,51.0.html
-[5]: //www.moparscape.org/smf/index.php/board,48.0.html
-[6]: //www.moparscape.org/serverstatus.php
-[7]: //www.moparscape.org/smf/index.php/board,221.0.html
-[8]: //www.moparscape.org/smf/index.php/topic,354311.0.html
-[9]: //www.moparisthebest.com/irc.php?img=0&host=irc.moparscape.org&channel=moparscape&nick=Guest
-[10]: //www.moparscape.org/smf/index.php/topic,338737.0.html
-[11]: //www.moparscape.org/smf/index.php/topic,6915.0.html
-[12]: //www.moparscape.org/moparscape3.php
+That’s all for now, if you have any questions that aren’t answered just ask them ;)

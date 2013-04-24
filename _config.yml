@@ -2,9 +2,9 @@
 #      Main Configs       #
 # ----------------------- #
 
-url: //www.moparscape.org
-title: MoparScape.org
-subtitle: The mother of RS private servers
+url: //www.moparisthebest.com
+title: Moparisthebest.com
+subtitle: The home of runescape cheating
 author: Moparisthebest
 simple_search: //google.com/search
 description:
@@ -85,20 +85,20 @@ delicious_user:
 delicious_count: 3
 
 # Disqus Comments
-disqus_short_name: moparscape
+disqus_short_name: moparisthebest
 disqus_show_comment_count: true
 
 # Google Analytics
-google_analytics_tracking_id: UA-6877554-1
+google_analytics_tracking_id: UA-6877554-2
 
 # Google Adsense
 google_ad_client: ca-pub-3055920918910714
 
-google_sidead_slot: 8451358572
+google_sidead_slot: 8362130178
 google_sidead_width: 160
 google_sidead_height: 600
 
-google_bannerad_slot: 4021158971
+google_bannerad_slot: 2315596576
 google_bannerad_width: 468
 google_bannerad_height: 60
 
