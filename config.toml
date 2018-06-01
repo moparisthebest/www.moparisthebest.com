@@ -1,0 +1,42 @@
+# The URL the site will be built for
+base_url = "https://www.moparisthebest.com"
+
+# Used in RSS by default
+title = "moparisthebest.com"
+description = "The home of runescape cheating"
+
+# Whether to automatically compile all Sass files in the sass directory
+compile_sass = true
+
+# Whether to do syntax highlighting
+# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Gutenberg
+highlight_code = true
+
+# Whether to build a search index to be used later on by a JavaScript library
+build_search_index = true
+
+# Theme name to use
+theme = "even"
+
+# A list of glob patterns specifying asset files to ignore when
+# processing the content directory.
+# Defaults to none, which means all asset files are copied over to the public folder.
+# Example:
+#     ignored_content = ["*.{graphml,xlsx}", "temp.*"]
+ignored_content = ["*.kate-swp"]
+
+[extra]
+# Put all your custom variables here
+author = "moparisthebest"
+even_title = "moparisthebest.com"
+
+# This is the default menu
+even_menu = [
+    {url = "$BASE_URL/", name = "Blog"},
+    {url = "$BASE_URL/about/", name = "About Me"},
+    {url = "https://forum.moparisthebest.com/", name = "Forums"},
+    {url = "$BASE_URL/irc/", name = "IRC"},
+    {url = "$BASE_URL/pkgmanager/", name = "Package Managers"},
+    {url = "$BASE_URL/categories/", name = "Categories"},
+#    {url = "$BASE_URL/tags/", name = "Tags"},
+]
