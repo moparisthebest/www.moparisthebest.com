@@ -5,12 +5,15 @@ category = "Runescape Cheating"
 author = "VG_Kobra"
 +++
 
+Guest Author: VG_Kobra
+
 Jagex has finally taken some action to prevent/reduce the number of autoers mining Essence and selling them for money and real world money.
 <!-- more -->
 
 It has been noted that Macroers have been using bots to mine Essence endlessly and selling to members who make laws and nats out of it, therefore creating huge profits. Since mining Essence does not take massive skill to mine people do not care if their low level accounts are banned. To stop this JageX has issues classes for Essence. Free-World players can only mine Essence which can be made into only the 6 Basic Types of Runes while Members can mine Pure Essence which can be made into any rune and requires lvl 30 to mine. Due to this strategic plot Regular Essence prices will drop dramatically.
 
 Official Story:
+
 >Today we have made an adjustment to rune essence mining due to players breaking rule 7 and rule 12, using macros to mine the rune essence and then sell it.
 > 
 >As you are probably aware we have various systems in place to detect people breaking rule 7 and ban them. These systems work very effectively at detecting people breaking this rule, and make macroing a really bad way to try and train a high level character.

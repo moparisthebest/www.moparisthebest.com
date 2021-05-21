@@ -33,10 +33,10 @@ even_title = "moparisthebest.com"
 # This is the default menu
 even_menu = [
     {url = "$BASE_URL/", name = "Blog"},
-    {url = "$BASE_URL/about/", name = "About Me"},
+#    {url = "$BASE_URL/about/", name = "About Me"},
     {url = "https://forum.moparisthebest.com/", name = "Forums"},
-    {url = "$BASE_URL/irc/", name = "IRC"},
+    {url = "https://irc.moparisthe.best/", name = "IRC"},
     {url = "$BASE_URL/pkgmanager/", name = "Package Managers"},
-    {url = "$BASE_URL/categories/", name = "Categories"},
+#    {url = "$BASE_URL/categories/", name = "Categories"},
 #    {url = "$BASE_URL/tags/", name = "Tags"},
 ]
