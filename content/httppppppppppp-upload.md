@@ -34,8 +34,8 @@ Solution(s)
 1. Conversations has a [handful](https://github.com/iNPUTmice/Conversations/commit/7e762eb799abe0d4f172d04eb714b97e838a8b1f) [of](https://github.com/iNPUTmice/Conversations/commit/eadb1e127b81005b8d83a86197e6c71ce0115fcc) [commits](https://github.com/iNPUTmice/Conversations/commit/95e3a6769d6cdc08ff86d70fb8cb561974346501) to:  
     a. request uncompressed file size  
     b. only download up to that size
-2. Dino [allows file transfers to be cancelled](https://github.com/dino/dino/commit/193bf38a790b2a124493c3b7ad591f826e0f773d)
-3. Gajim [allows file tranfers to be cancelled](https://dev.gajim.org/gajim/gajim/-/commit/57924ca86061d60634bfa3ff0253b9d481f0f906)
+2. Dino [allows file transfers to be canceled](https://github.com/dino/dino/commit/193bf38a790b2a124493c3b7ad591f826e0f773d)
+3. Gajim [allows file transfers to be canceled](https://dev.gajim.org/gajim/gajim/-/commit/57924ca86061d60634bfa3ff0253b9d481f0f906)
 4. Siskin [only downloads the number of bytes returned in HEAD request](https://github.com/tigase/siskin-im/commit/2a9adecbbdccee880e1d587d65ed2d2be899ccca)
 
 (Impossibility of) Coordinated Disclosure
@@ -48,8 +48,10 @@ Advice for HTTP-using devs
 
 1. You have no guarantee headers will end, limit these to something sane, maybe 16k of headers or something
 2. You have no guarantee data returned by the HEAD request will match that returned by the GET request.
-3. Beware transer-chunked encoding.
+3. Beware transfer-chunked encoding.
 4. Always have a way to cancel or a sane limit.
+5. Make sure your "sane limit" is *after* decompression is applied, not before (ie [zip-bomb](https://en.wikipedia.org/wiki/Zip_bomb) )
+6. Beware old attacks like [slow loris](https://en.wikipedia.org/wiki/Slowloris_(computer_security)) so require a minimum speed
 
 For XMPP client devs specifically, this advice applies to downloading HTTP Uploaded files, POSH files, host-meta files, and anything else you might grab over HTTP.  Honestly just beware [any stream that may be unlimited](https://www.moparisthebest.com/eatxmempp-cve-2021-32918/).
 
