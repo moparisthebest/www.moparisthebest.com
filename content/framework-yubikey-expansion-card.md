@@ -30,6 +30,6 @@ For my first try I just skinned a tiny hole in the wire, and it worked *ok* but 
 
 [![pre-install](/pics/framework-yubi/pre-install.jpg)](/pics/framework-yubi/pre-install.jpg)
 
-One more problem to solve... Suddenly my yubikey was being pressed without me touching it, I had checked if the aluminum-looking body of the laptop or the modules were conductive with a multimeter before and got 0 ohms, but turns out when you push a wire really hard into it, it's enough to trigger the yubikey sensor.  That's why in the pic of it installed in the laptop up top, you can see only the middle is exposed, I put 2 bits of electrical tape on each side where it touches the body of the expansion card.
+One more problem to solve... Suddenly my yubikey was being pressed without me touching it, I had checked if the aluminum-looking body of the laptop or the modules were conductive with a multimeter before and could measure no conductivity, but turns out when you push a wire really hard into it, it's enough to trigger the yubikey sensor.  That's why in the pic of it installed in the laptop up top, you can see only the middle is exposed, I put 2 bits of electrical tape on each side where it touches the body of the expansion card.
 
-Overall, I'm very happy with this. For questions/comments, please reply to the [fediverse post](https://moparisthe.best/notice/AgbCUJdgcCKV57rpke).
+Overall, I'm very happy with this. For questions/comments, please reply to the [fediverse post](https://moparisthe.best/notice/AgbCUJdgcCKV57rpke) or the [frame.work forum post](https://community.frame.work/t/integrated-yubikey-expansion-card/48427).
