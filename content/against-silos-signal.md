@@ -23,6 +23,8 @@ If you like your client with e2e and the author does something stupid, like [cre
 
 *Nothing* is a competitor to XMPP.  Signal and most other silos don't want to be, because they are in it for the user lock-in, and the VC money they hope might come from it one day.  When it doesn't, they *will* sell your data or shut it down.  XMPP has been around for over 25 years while dozens of silos have came and gone, it will be around in another 25 years, Signal will not.  Stop the endless silo hopping, hop to XMPP and never leave.  If you are capable of running your own server for your family and friends I suggest [Snikket](https://snikket.org/start/), if you just want a good server hosted by someone else, [Conversations.im](https://account.conversations.im/).
 
+Because people have brought it up, I want to stress that while forming a [Threat Model](https://blog.jmp.chat/b/2022-privacy-threat-modelling) is critical before considering privacy, it is not applicable in any way to my main point up above.  This is because there is no threat model where you need sound e2e to protect you from a provider, but trust that same provider to push any code they want to your system silently and automatically.  That simply doesn't make sense.
+
 Lastly, just because people might ask if any of the "findings" are legitimate, yes, one: The version of the BouncyCastle library used by Conversations needed to be updated, [it already has been](https://codeberg.org/iNPUTmice/Conversations/commit/f764b24ffc1089cad147887053d8b64d8207b248), a real security researcher would have let the dev know, instead of publishing a sensational blog post with a silly conclusion.
 
 Here are some links if you would like more in depth reading on the subject:  
